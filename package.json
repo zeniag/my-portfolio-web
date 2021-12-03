@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "zenia-gist-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Web developer portfolio built with Gatsby and Sanity",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Zenia <zeniagist@gmail.com>",
   "dependencies": {
     "gatsby": "^4.3.0",
     "gatsby-plugin-gatsby-cloud": "^4.3.0",
