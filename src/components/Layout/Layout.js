@@ -1,14 +1,19 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import "./layout.css"
+import { ThemeProvider } from "@mui/material/styles"
+import { CssBaseline } from "@mui/material"
+import theme from "../../theme"
+
+import Header from "../Header/Header"
+import Footer from "../Footer/Footer"
 
 const Layout = ({ children }) => {
   return (
-    <>
-      <div>
-        <main>{children}</main>
-      </div>
-    </>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </ThemeProvider>
   )
 }
 
