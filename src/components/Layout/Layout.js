@@ -3,6 +3,7 @@ import { ThemeProvider } from "@mui/material/styles"
 import { CssBaseline } from "@mui/material"
 import theme from "../../theme"
 
+import "../../styles/styles.scss"
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 
@@ -11,7 +12,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
-      <div style={{ marginTop: 64 }}>{children}</div>
+      <div className="wrapper">{children}</div>
       <Footer />
     </ThemeProvider>
   )

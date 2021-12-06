@@ -12,6 +12,7 @@ import {
 } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 import logo from "../../images/favicon.png"
+import * as styles from "../../styles/styles.scss"
 import * as headerStyles from "./Header.module.scss"
 
 export default function Header() {
