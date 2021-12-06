@@ -4,7 +4,7 @@
 
 .media {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.35)),
-    url("/images/hero.jpeg") 50% no-repeat fixed;
+    url("/images/hero.jpeg") center center no-repeat;
   background-size: cover;
   height: 500px;
   display: flex;
