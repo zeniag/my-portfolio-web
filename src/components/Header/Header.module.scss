@@ -1,0 +1,35 @@
+$primary: #ff3f3f;
+$secondary: #ffffff;
+
+.link {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  padding: 0 10px;
+  a {
+    color: $secondary;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &:hover {
+    background: $primary;
+  }
+}
+
+.linkForMobile {
+  color: $secondary;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.small {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

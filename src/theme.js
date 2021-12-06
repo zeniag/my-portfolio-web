@@ -1,4 +1,4 @@
-import { createTheme, ThemeProvider } from "@mui/material/styles"
+import { createTheme } from "@mui/material/styles"
 import { red, grey } from "@mui/material/colors"
 
 const theme = createTheme({
@@ -11,7 +11,7 @@ const theme = createTheme({
     secondary: {
       light: grey["A50"],
       main: grey["A200"],
-      dark: grey["A400"],
+      dark: grey["A700"],
     },
     mode: "dark",
   },
@@ -23,13 +23,13 @@ const theme = createTheme({
     h4: { fontWeight: 500 },
   },
   components: {
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          backgroundColor: grey["A200"],
-        },
-      },
-    },
+    // MuiPaper: {
+    //   styleOverrides: {
+    //     root: {
+    //       backgroundColor: grey["A200"],
+    //     },
+    //   },
+    // },
     MuiButton: {
       styleOverrides: {
         contained: {
@@ -41,6 +41,7 @@ const theme = createTheme({
       styleOverrides: {
         regular: {
           minHeight: 64,
+          backgroundColor: "#ff3f3f",
         },
       },
     },
