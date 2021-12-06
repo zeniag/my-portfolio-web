@@ -13,7 +13,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu"
 
 import logo from "../../images/favicon.png"
-import * as headerStyles from "./Header.module.scss"
+import * as navbarStyles from "./Navbar.module.scss"
 
 export default function Header() {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
@@ -62,28 +62,28 @@ export default function Header() {
     >
       <MenuItem>
         <Typography variant="body1">
-          <Link to="/" className={headerStyles.linkForMobile}>
+          <Link to="/" className={navbarStyles.linkForMobile}>
             Home
           </Link>
         </Typography>
       </MenuItem>
       <MenuItem>
         <Typography variant="body1">
-          <Link to="#" className={headerStyles.linkForMobile}>
+          <Link to="#" className={navbarStyles.linkForMobile}>
             Projects
           </Link>
         </Typography>
       </MenuItem>
       <MenuItem>
         <Typography variant="body1">
-          <Link to="#" className={headerStyles.linkForMobile}>
+          <Link to="#" className={navbarStyles.linkForMobile}>
             About
           </Link>
         </Typography>
       </MenuItem>
       <MenuItem>
         <Typography variant="body1">
-          <Link to="#" className={headerStyles.linkForMobile}>
+          <Link to="#" className={navbarStyles.linkForMobile}>
             Contact
           </Link>
         </Typography>
@@ -100,7 +100,7 @@ export default function Header() {
             noWrap
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
-            className={headerStyles.link}
+            className={navbarStyles.link}
           >
             <Link to="/">
               <Avatar title={metadata.title} src={logo} alt={metadata.title} />
@@ -108,16 +108,16 @@ export default function Header() {
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <Typography variant="body1" className={headerStyles.link}>
+            <Typography variant="body1" className={navbarStyles.link}>
               <Link to="/">Home</Link>
             </Typography>
-            <Typography variant="body1" className={headerStyles.link}>
+            <Typography variant="body1" className={navbarStyles.link}>
               <Link to="#">Projects</Link>
             </Typography>
-            <Typography variant="body1" className={headerStyles.link}>
+            <Typography variant="body1" className={navbarStyles.link}>
               <Link to="#">About</Link>
             </Typography>
-            <Typography variant="body1" className={headerStyles.link}>
+            <Typography variant="body1" className={navbarStyles.link}>
               <Link to="#">Contact</Link>
             </Typography>
           </Box>

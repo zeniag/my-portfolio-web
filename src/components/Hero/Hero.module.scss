@@ -3,10 +3,10 @@
 }
 
 .media {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.35)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.45)),
     url("/images/hero.jpeg") center center no-repeat;
   background-size: cover;
-  height: 500px;
+  height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,6 +16,10 @@
 .heading {
   font-size: 77px;
   margin: 0;
+}
+
+.content {
+  font-size: 40px;
 }
 
 .heading,
