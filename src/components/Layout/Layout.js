@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Header />
-      <main>{children}</main>
+      <div style={{ marginTop: 64 }}>{children}</div>
       <Footer />
     </ThemeProvider>
   )
