@@ -2,11 +2,11 @@ import { Avatar, Paper } from "@mui/material"
 import React from "react"
 
 import * as footerStyles from "./Footer.module.scss"
-import gatsby from "../../images/avatars/gatsby.svg"
-import graphql from "../../images/avatars/graphql.svg"
-import sanity from "../../images/avatars/sanity.svg"
-import materialUI from "../../images/avatars/materialUI.svg"
-import react from "../../images/avatars/react.svg"
+import gatsby from "../../../static/images/avatars/gatsby.svg"
+import graphql from "../../../static/images/avatars/graphql.svg"
+import sanity from "../../../static/images/avatars/sanity.svg"
+import materialUI from "../../../static/images/avatars/materialUI.svg"
+import react from "../../../static/images/avatars/react.svg"
 
 const Footer = () => {
   return (

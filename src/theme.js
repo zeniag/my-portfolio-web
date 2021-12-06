@@ -1,17 +1,16 @@
 import { createTheme } from "@mui/material/styles"
-import { red, grey } from "@mui/material/colors"
 
 const theme = createTheme({
   palette: {
     primary: {
-      light: red[300],
-      main: "#ff3f3f",
-      dark: red[700],
+      light: "#ff6d80",
+      main: "#E33654",
+      dark: "#aa002c",
     },
     secondary: {
-      light: grey["A50"],
-      main: grey["A200"],
-      dark: grey["A700"],
+      light: "#484848",
+      main: "#212121",
+      dark: "#000000",
     },
     mode: "dark",
   },
@@ -33,7 +32,7 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         contained: {
-          backgroundColor: "#ff3f3f",
+          backgroundColor: "#E33654",
         },
       },
     },
@@ -41,7 +40,7 @@ const theme = createTheme({
       styleOverrides: {
         regular: {
           minHeight: 64,
-          backgroundColor: "#ff3f3f",
+          backgroundColor: "#E33654",
         },
       },
     },
