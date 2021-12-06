@@ -33,8 +33,6 @@ export default function Header() {
         edges {
           node {
             siteMetadata {
-              author
-              description
               title
             }
           }
@@ -94,7 +92,7 @@ export default function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <Typography
             variant="h6"
@@ -104,12 +102,7 @@ export default function Header() {
             className={headerStyles.link}
           >
             <Link to="/">
-              <Avatar
-                title={metadata.title}
-                src={logo}
-                alt={metadata.title}
-                className={headerStyles.small}
-              />
+              <Avatar title={metadata.title} src={logo} alt={metadata.title} />
             </Link>
           </Typography>
           <Box sx={{ flexGrow: 1 }} />
