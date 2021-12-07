@@ -28,6 +28,8 @@ export default function Header() {
     setMobileMoreAnchorEl(event.currentTarget)
   }
 
+  const url = window.location.pathname
+
   const data = useStaticQuery(graphql`
     query SiteMetadataQuery {
       metadata: allSite {
@@ -67,27 +69,31 @@ export default function Header() {
           </Link>
         </Typography>
       </MenuItem>
-      <MenuItem>
-        <Typography variant="body1">
-          <Link to="#" className={navbarStyles.linkForMobile}>
-            Projects
-          </Link>
-        </Typography>
-      </MenuItem>
-      <MenuItem>
-        <Typography variant="body1">
-          <Link to="#" className={navbarStyles.linkForMobile}>
-            About
-          </Link>
-        </Typography>
-      </MenuItem>
-      <MenuItem>
-        <Typography variant="body1">
-          <Link to="#" className={navbarStyles.linkForMobile}>
-            Contact
-          </Link>
-        </Typography>
-      </MenuItem>
+      {url === "/" && (
+        <>
+          <MenuItem>
+            <Typography variant="body1">
+              <Link to="#portfolio" className={navbarStyles.linkForMobile}>
+                Projects
+              </Link>
+            </Typography>
+          </MenuItem>
+          <MenuItem>
+            <Typography variant="body1">
+              <Link to="#about" className={navbarStyles.linkForMobile}>
+                About
+              </Link>
+            </Typography>
+          </MenuItem>
+          <MenuItem>
+            <Typography variant="body1">
+              <Link to="#contact" className={navbarStyles.linkForMobile}>
+                Contact
+              </Link>
+            </Typography>
+          </MenuItem>
+        </>
+      )}
     </Menu>
   )
 
@@ -111,15 +117,19 @@ export default function Header() {
             <Typography variant="body1" className={navbarStyles.link}>
               <Link to="/">Home</Link>
             </Typography>
-            <Typography variant="body1" className={navbarStyles.link}>
-              <Link to="#">Projects</Link>
-            </Typography>
-            <Typography variant="body1" className={navbarStyles.link}>
-              <Link to="#">About</Link>
-            </Typography>
-            <Typography variant="body1" className={navbarStyles.link}>
-              <Link to="#">Contact</Link>
-            </Typography>
+            {url === "/" && (
+              <>
+                <Typography variant="body1" className={navbarStyles.link}>
+                  <Link to="#portfolio">Projects</Link>
+                </Typography>
+                <Typography variant="body1" className={navbarStyles.link}>
+                  <Link to="#about">About</Link>
+                </Typography>
+                <Typography variant="body1" className={navbarStyles.link}>
+                  <Link to="#contact">Contact</Link>
+                </Typography>
+              </>
+            )}
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton

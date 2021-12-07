@@ -41,7 +41,7 @@ const Projects = () => {
   `)
   const projectsData = data.projects.edges
   return (
-    <div>
+    <div id="portfolio">
       <Paper square className={projectsStyles.lightPaper}>
         <Container maxWidth="lg">
           <Typography

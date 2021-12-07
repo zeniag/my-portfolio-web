@@ -1,14 +1,14 @@
 import { Paper } from "@mui/material"
 import React from "react"
 
-import SkillSet from "../SkillSet/SkillSet"
+// import SkillSet from "../SkillSet/SkillSet"
 import Bio from "../Bio/Bio"
 
 const About = () => {
   return (
-    <Paper square style={{ paddingBottom: "30px" }}>
+    <Paper square style={{ paddingBottom: "30px" }} id="about">
       <Bio />
-      <SkillSet />
+      {/* <SkillSet /> */}
     </Paper>
   )
 }
