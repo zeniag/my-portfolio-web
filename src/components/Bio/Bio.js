@@ -1,4 +1,4 @@
-import { Avatar, Container, Grid, Paper, Typography } from "@mui/material"
+import { Avatar, Container, Grid, Typography } from "@mui/material"
 import React from "react"
 
 import * as bioStyles from "./Bio.module.scss"

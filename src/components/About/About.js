@@ -1,4 +1,4 @@
-import { Avatar, Container, Grid, Paper, Typography } from "@mui/material"
+import { Paper } from "@mui/material"
 import React from "react"
 
 import * as aboutStyles from "./About.module.scss"
