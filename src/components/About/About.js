@@ -6,10 +6,13 @@ import Bio from "../Bio/Bio"
 
 const About = () => {
   return (
-    <Paper square style={{ paddingBottom: "30px" }} id="about">
-      <Bio />
-      {/* <SkillSet /> */}
-    </Paper>
+    <>
+      <div id="about" style={{ marginTop: -64, paddingTop: 64 }} />
+      <Paper square style={{ paddingBottom: "30px" }}>
+        <Bio />
+        {/* <SkillSet /> */}
+      </Paper>
+    </>
   )
 }
 

@@ -41,8 +41,12 @@ const Projects = () => {
   `)
   const projectsData = data.projects.edges
   return (
-    <div id="portfolio">
-      <Paper square className={projectsStyles.lightPaper}>
+    <div id="portfolio" style={{ marginTop: -64, paddingTop: 64 }}>
+      <Paper
+        square
+        className={projectsStyles.lightPaper}
+        style={{ paddingBottom: 30 }}
+      >
         <Container maxWidth="lg">
           <Typography
             variant="h3"
