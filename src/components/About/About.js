@@ -1,13 +1,12 @@
 import { Paper } from "@mui/material"
 import React from "react"
 
-import * as aboutStyles from "./About.module.scss"
 import SkillSet from "../SkillSet/SkillSet"
 import Bio from "../Bio/Bio"
 
 const About = () => {
   return (
-    <Paper square className={aboutStyles.paperContainer}>
+    <Paper square style={{ paddingBottom: "30px" }}>
       <Bio />
       <SkillSet />
     </Paper>

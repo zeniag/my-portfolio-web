@@ -53,7 +53,7 @@ const Projects = () => {
           <Grid container spacing={3}>
             {projectsData.map(project => (
               <Grid item xs={12} sm={6} md={4} key={project.node.slug}>
-                <Card square className={projectsStyles.card}>
+                <Card square>
                   <CardActionArea>
                     <Link to={project.node.slug.current}>
                       <CardMedia
