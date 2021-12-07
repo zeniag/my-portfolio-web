@@ -28,6 +28,7 @@ export default function Header() {
     setMobileMoreAnchorEl(event.currentTarget)
   }
 
+  const isBrowser = () => typeof window !== "undefined"
   const url = window.location.pathname
 
   const data = useStaticQuery(graphql`
@@ -69,7 +70,7 @@ export default function Header() {
           </Link>
         </Typography>
       </MenuItem>
-      {url === "/" && (
+      {isBrowser() && url === "/" && (
         <>
           <MenuItem>
             <Typography variant="body1">
@@ -117,7 +118,7 @@ export default function Header() {
             <Typography variant="body1" className={navbarStyles.link}>
               <Link to="/">Home</Link>
             </Typography>
-            {url === "/" && (
+            {isBrowser() && url === "/" && (
               <>
                 <Typography variant="body1" className={navbarStyles.link}>
                   <Link to="#portfolio">Projects</Link>
