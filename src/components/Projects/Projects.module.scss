@@ -1,6 +1,7 @@
 .lightPaper {
   background-color: #ffffff;
   color: #000000;
+  padding-bottom: 50px;
 }
 
 .lightSectionHeading {
@@ -10,11 +11,36 @@
   color: #000000;
 }
 
-.projectImg {
-  background-size: cover;
-  height: 200px;
+.media {
+  height: 260px;
+}
+
+.forAccessibilityOnly {
+  opacity: 0;
+  height: 0;
+  display: flex;
+}
+
+.projectTitle {
+  color: #ffffff;
+}
+
+.projectTitle:hover {
+  color: #e33654;
 }
 
 .excerpt {
-  min-height: 150px;
+  min-height: 120px;
+  margin-bottom: 0;
+}
+
+.btnContainer {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.btn,
+.projectTitle {
+  text-decoration: none;
 }
