@@ -1,6 +1,6 @@
 .paper {
   margin-top: 64px;
-  padding-bottom: 1;
+  padding-bottom: 200px;
 }
 
 .header {
@@ -9,10 +9,14 @@
 
 .lightCard {
   background-color: #000000;
-  padding: 40px;
-  margin: 40px auto;
+  pointer-events: none;
+  // padding: 40px;
+  margin: 20px auto;
 }
 
 a {
   text-decoration: none;
+  h3 {
+    margin: 0;
+  }
 }

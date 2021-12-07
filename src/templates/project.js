@@ -1,8 +1,7 @@
 import * as React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-
-import Layout from "../components/Layout/Layout"
-import * as projectStyles from "./project.module.scss"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import LanguageIcon from "@mui/icons-material/Language"
 import {
   Button,
   Container,
@@ -16,10 +15,13 @@ import {
   CardActions,
 } from "@mui/material"
 
+import Layout from "../components/Layout/Layout"
+import * as projectStyles from "./project.module.scss"
+
 const ProjectTemplate = ({ data }) => {
   const { slug, title, mainImage, body, techStack, websiteLink, githubLink } =
     data.project
-  console.log(websiteLink)
+  console.log(techStack)
   return (
     <Layout>
       <Paper square className={projectStyles.paper}>
@@ -59,41 +61,60 @@ const ProjectTemplate = ({ data }) => {
                   ))}
                 </Typography>
               </CardContent>
-              <CardActions>
+              <CardContent>
+                <Typography variant="h4" style={{ textAlign: "center" }}>
+                  Tech Stack
+                </Typography>
                 <Grid
                   container
                   display="flex"
                   direction="row"
                   alignItems="center"
                   justifyContent="center"
-                  spacing={8}
+                  spacing={3}
                 >
-                  <Grid item>
-                    <a
-                      href={websiteLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button variant="contained" color="primary">
-                        Website
-                      </Button>
-                    </a>
-                  </Grid>
-                  <Grid item>
-                    <a
-                      href={githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button variant="contained" color="primary">
-                        Github
-                      </Button>
-                    </a>
-                  </Grid>
+                  {techStack.map(stack => (
+                    <Grid item key={stack.slug.current} textAlign="center">
+                      <div>
+                        <img
+                          src={stack.image.asset.url}
+                          alt={stack.title}
+                          height="50px"
+                          width="50px"
+                        />
+                      </div>
+                      <div>{stack.title}</div>
+                    </Grid>
+                  ))}
                 </Grid>
-              </CardActions>
+              </CardContent>
             </CardActionArea>
           </Card>
+          <Grid
+            container
+            display="flex"
+            direction="row"
+            alignItems="center"
+            justifyContent="center"
+            spacing={3}
+          >
+            <Grid item>
+              <a href={websiteLink} target="_blank" rel="noopener noreferrer">
+                <Button variant="contained" color="primary">
+                  <LanguageIcon style={{ marginRight: "5px" }} />
+                  <h3>Website</h3>
+                </Button>
+              </a>
+            </Grid>
+            <Grid item>
+              <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                <Button variant="contained" color="primary">
+                  <GitHubIcon style={{ marginRight: "5px" }} />
+                  <h3>Github</h3>
+                </Button>
+              </a>
+            </Grid>
+          </Grid>
         </Container>
       </Paper>
     </Layout>

@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-fontawesome-css`,
     {
       resolve: `gatsby-source-sanity`,
       options: {
