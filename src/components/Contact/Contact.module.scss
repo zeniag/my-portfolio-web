@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
+
+.contactSection {
+  padding-bottom: 30px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.87)),
+    url("/images/office.jpeg") center center no-repeat fixed;
+  background-size: cover;
+  padding: 40px 0;
+}
+
+.sectionHeading {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

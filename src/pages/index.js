@@ -6,13 +6,15 @@ import Contact from "../components/Contact/Contact"
 import Hero from "../components/Hero/Hero"
 import Projects from "../components/Projects/Projects"
 
-const IndexPage = () => (
-  <Layout>
-    <Hero />
-    <About />
-    <Projects />
-    <Contact />
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <Layout>
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+    </Layout>
+  )
+}
 
 export default IndexPage

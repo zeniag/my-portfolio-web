@@ -15,7 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu"
 import logo from "../../images/favicon.png"
 import * as navbarStyles from "./Navbar.module.scss"
 
-export default function Header() {
+export default function Navbar({ location }) {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
 
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
@@ -27,9 +27,6 @@ export default function Header() {
   const handleMobileMenuOpen = event => {
     setMobileMoreAnchorEl(event.currentTarget)
   }
-
-  const isBrowser = () => typeof window !== "undefined"
-  const url = window.location.pathname
 
   const data = useStaticQuery(graphql`
     query SiteMetadataQuery {
@@ -70,31 +67,27 @@ export default function Header() {
           </Link>
         </Typography>
       </MenuItem>
-      {isBrowser() && url === "/" && (
-        <>
-          <MenuItem>
-            <Typography variant="body1">
-              <Link to="#portfolio" className={navbarStyles.linkForMobile}>
-                Projects
-              </Link>
-            </Typography>
-          </MenuItem>
-          <MenuItem>
-            <Typography variant="body1">
-              <Link to="#about" className={navbarStyles.linkForMobile}>
-                About
-              </Link>
-            </Typography>
-          </MenuItem>
-          <MenuItem>
-            <Typography variant="body1">
-              <Link to="#contact" className={navbarStyles.linkForMobile}>
-                Contact
-              </Link>
-            </Typography>
-          </MenuItem>
-        </>
-      )}
+      <MenuItem>
+        <Typography variant="body1">
+          <Link to="#portfolio" className={navbarStyles.linkForMobile}>
+            Projects
+          </Link>
+        </Typography>
+      </MenuItem>
+      <MenuItem>
+        <Typography variant="body1">
+          <Link to="#about" className={navbarStyles.linkForMobile}>
+            About
+          </Link>
+        </Typography>
+      </MenuItem>
+      <MenuItem>
+        <Typography variant="body1">
+          <Link to="#contact" className={navbarStyles.linkForMobile}>
+            Contact
+          </Link>
+        </Typography>
+      </MenuItem>
     </Menu>
   )
 
@@ -118,19 +111,15 @@ export default function Header() {
             <Typography variant="body1" className={navbarStyles.link}>
               <Link to="/">Home</Link>
             </Typography>
-            {isBrowser() && url === "/" && (
-              <>
-                <Typography variant="body1" className={navbarStyles.link}>
-                  <Link to="#portfolio">Projects</Link>
-                </Typography>
-                <Typography variant="body1" className={navbarStyles.link}>
-                  <Link to="#about">About</Link>
-                </Typography>
-                <Typography variant="body1" className={navbarStyles.link}>
-                  <Link to="#contact">Contact</Link>
-                </Typography>
-              </>
-            )}
+            <Typography variant="body1" className={navbarStyles.link}>
+              <Link to="#portfolio">Projects</Link>
+            </Typography>
+            <Typography variant="body1" className={navbarStyles.link}>
+              <Link to="#about">About</Link>
+            </Typography>
+            <Typography variant="body1" className={navbarStyles.link}>
+              <Link to="#contact">Contact</Link>
+            </Typography>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton

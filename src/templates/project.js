@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link, graphql } from "gatsby"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import LanguageIcon from "@mui/icons-material/Language"
 import {
@@ -12,7 +12,6 @@ import {
   CardActionArea,
   CardContent,
   CardMedia,
-  CardActions,
 } from "@mui/material"
 
 import Layout from "../components/Layout/Layout"
