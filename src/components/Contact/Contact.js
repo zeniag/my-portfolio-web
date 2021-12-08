@@ -18,9 +18,7 @@ const Contact = () => {
           <Typography variant="h3" className={contactStyles.sectionHeading}>
             Hire Me!
           </Typography>
-          <Typography variant="body1" className={contactStyles.sectionContent}>
-            Text
-          </Typography>
+          <Typography variant="body1">Text</Typography>
           <form noValidate autoComplete="off" style={{ marginTop: "40px" }}>
             <Grid container spacing={3}>
               <Grid item xs={12} sm={4}>
