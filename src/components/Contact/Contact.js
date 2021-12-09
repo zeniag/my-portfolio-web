@@ -6,20 +6,44 @@ import {
   TextField,
   Typography,
 } from "@mui/material"
-import React from "react"
+import React, { useState } from "react"
+import axios from "axios"
 
 import * as contactStyles from "./Contact.module.scss"
 
 const Contact = () => {
+  const [name, setName] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [emailSent, setEmailSent] = useState(false)
+
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    const dataToSubmit = {
+      name: name,
+      phoneNumber: phoneNumber,
+      email: email,
+      message: message,
+    }
+
+    axios.post("/api/form", dataToSubmit)
+  }
+
   return (
     <div id="contact" style={{ marginTop: -64, paddingTop: 64 }}>
       <Paper square className={contactStyles.contactSection}>
         <Container maxWidth="lg">
           <Typography variant="h3" className={contactStyles.sectionHeading}>
-            Hire Me!
+            Contact Me!
           </Typography>
-          <Typography variant="body1">Text</Typography>
-          <form noValidate autoComplete="off" style={{ marginTop: "40px" }}>
+          <form
+            noValidate
+            autoComplete="off"
+            style={{ marginTop: "40px" }}
+            onSubmit={handleSubmit}
+          >
             <Grid container spacing={3}>
               <Grid item xs={12} sm={4}>
                 <TextField
@@ -30,6 +54,8 @@ const Contact = () => {
                   margin="dense"
                   fullWidth
                   name="name"
+                  value={name}
+                  onChange={e => setName(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12} sm={4}>
@@ -39,7 +65,9 @@ const Contact = () => {
                   size="small"
                   margin="dense"
                   fullWidth
-                  name="phone"
+                  name="phoneNumber"
+                  value={phoneNumber}
+                  onChange={e => setPhoneNumber(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12} sm={4}>
@@ -52,6 +80,8 @@ const Contact = () => {
                   fullWidth
                   name="email"
                   type="email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -65,8 +95,17 @@ const Contact = () => {
                   name="message"
                   multiline
                   rows={8}
+                  value={message}
+                  onChange={e => setMessage(e.target.value)}
                 />
               </Grid>
+              <div
+                className={
+                  emailSent ? contactStyles.msgAppear : contactStyles.msg
+                }
+              >
+                Message Has Been Sent!
+              </div>
               <Grid item xs={12} className={contactStyles.btn}>
                 <Button variant="contained" color="primary" type="submit">
                   Send

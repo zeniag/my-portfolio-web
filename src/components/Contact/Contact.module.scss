@@ -14,6 +14,26 @@
   padding: 20px 0;
 }
 
+.msg {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  letter-spacing: 0.2rem;
+  font-style: italic;
+  width: 340px;
+  padding: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(5, 110, 5);
+  background-color: #fff;
+  border-radius: 5px;
+  display: none;
+}
+
+.msgAppear {
+  display: block;
+}
+
 .btn {
   display: flex;
   align-items: center;
