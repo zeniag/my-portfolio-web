@@ -17,18 +17,37 @@ const Contact = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   const [emailSent, setEmailSent] = useState(false)
-
-  const handleSubmit = e => {
-    e.preventDefault()
-
-    const dataToSubmit = {
-      name: name,
-      phoneNumber: phoneNumber,
-      email: email,
-      message: message,
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null,
+  })
+  const handleServerResponse = (ok, msg, form) => {
+    setServerState({
+      submitting: false,
+      status: { ok, msg },
+    })
+    if (ok) {
+      form.reset()
     }
-
-    axios.post("/api/form", dataToSubmit)
+  }
+  const handleOnSubmit = e => {
+    e.preventDefault()
+    const form = e.target
+    setServerState({ submitting: true })
+    if (name !== "" && email !== "" && message !== "") {
+      axios({
+        method: "post",
+        url: "https://getform.io/f/4d86b248-f7e2-41af-8c57-c98310fc45f7",
+        data: new FormData(form),
+      })
+        .then(r => {
+          handleServerResponse(true, "Thanks!", form)
+          setEmailSent(true)
+        })
+        .catch(r => {
+          handleServerResponse(false, r.response.data.error, form)
+        })
+    }
   }
 
   return (
@@ -42,7 +61,7 @@ const Contact = () => {
             noValidate
             autoComplete="off"
             style={{ marginTop: "40px" }}
-            onSubmit={handleSubmit}
+            onSubmit={handleOnSubmit}
           >
             <Grid container spacing={3}>
               <Grid item xs={12} sm={4}>
