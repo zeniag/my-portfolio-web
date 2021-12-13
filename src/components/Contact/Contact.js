@@ -16,7 +16,6 @@ const Contact = () => {
   const [phoneNumber, setPhoneNumber] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const [emailSent, setEmailSent] = useState(false)
   const [serverState, setServerState] = useState({
     submitting: false,
     status: null,
@@ -42,7 +41,6 @@ const Contact = () => {
       })
         .then(r => {
           handleServerResponse(true, "Thanks!", form)
-          setEmailSent(true)
         })
         .catch(r => {
           handleServerResponse(false, r.response.data.error, form)
