@@ -20,7 +20,6 @@ import * as projectStyles from "./project.module.scss"
 const ProjectTemplate = ({ data }) => {
   const { slug, title, mainImage, body, techStack, websiteLink, githubLink } =
     data.project
-  console.log(techStack)
   return (
     <Layout>
       <Paper square className={projectStyles.paper}>
