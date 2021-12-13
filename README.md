@@ -3,7 +3,7 @@
 Personal resume website developed using Gatsby and Sanity and hosted on Netlify.
 Displays my web presence, work experience, education, projects, achievements, and contact information.
 
-![Portfolio Img](./src/static/my-portfolio.png)
+![Portfolio Img](./static/my-portfolio.png)
 
 ### Author
 
