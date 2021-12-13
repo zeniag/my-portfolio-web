@@ -14,14 +14,15 @@ import {
   CardMedia,
 } from "@mui/material"
 
-import Layout from "../components/Layout/Layout"
+// import Layout from "../components/Layout/Layout"
+import ProjectTemplateLayout from "./projectTemplateLayout"
 import * as projectStyles from "./project.module.scss"
 
 const ProjectTemplate = ({ data }) => {
   const { slug, title, mainImage, body, techStack, websiteLink, githubLink } =
     data.project
   return (
-    <Layout>
+    <ProjectTemplateLayout>
       <Paper square className={projectStyles.paper}>
         <Container>
           <Grid
@@ -115,7 +116,7 @@ const ProjectTemplate = ({ data }) => {
           </Grid>
         </Container>
       </Paper>
-    </Layout>
+    </ProjectTemplateLayout>
   )
 }
 
