@@ -123,7 +123,9 @@ const Contact = () => {
               </Grid>
               <div
                 className={
-                  emailSent ? contactStyles.msgAppear : contactStyles.msg
+                  serverState.status
+                    ? contactStyles.msgAppear
+                    : contactStyles.msg
                 }
               >
                 Message Has Been Sent!
