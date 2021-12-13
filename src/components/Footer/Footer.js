@@ -2,46 +2,50 @@ import { Avatar, Paper } from "@mui/material"
 import React from "react"
 
 import * as footerStyles from "./Footer.module.scss"
-import gatsby from "../../../static/images/avatars/gatsby.svg"
-import graphql from "../../../static/images/avatars/graphql.svg"
-import sanity from "../../../static/images/avatars/sanity.svg"
-import materialUI from "../../../static/images/avatars/materialUI.svg"
-import react from "../../../static/images/avatars/react.svg"
+import github from "../../../static/images/avatars/github.svg"
+import linkedin from "../../../static/images/avatars/linkedin.svg"
+import gmail from "../../../static/images/avatars/gmail.svg"
 
 const Footer = () => {
   return (
     <div className={footerStyles.root}>
       <Paper className={footerStyles.footer} square>
-        <Avatar
-          variant="square"
-          alt="Gatsby"
-          src={gatsby}
-          className={footerStyles.small}
-        />
-        <Avatar
-          variant="square"
-          alt="GraphQL"
-          src={graphql}
-          className={footerStyles.small}
-        />
-        <Avatar
-          variant="square"
-          alt="Sanity"
-          src={sanity}
-          className={footerStyles.small}
-        />
-        <Avatar
-          variant="square"
-          alt="Material UI"
-          src={materialUI}
-          className={footerStyles.small}
-        />
-        <Avatar
-          variant="square"
-          alt="React"
-          src={react}
-          className={footerStyles.small}
-        />
+        <a
+          href="https://github.com/zeniagist"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Avatar
+            variant="square"
+            alt="Github"
+            src={github}
+            className={footerStyles.small}
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/zeniagist/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Avatar
+            variant="square"
+            alt="LinkedIn"
+            src={linkedin}
+            className={footerStyles.small}
+          />
+        </a>
+        <a
+          href="mailto:zeniagist@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Avatar
+            variant="square"
+            alt="Gmail"
+            src={gmail}
+            className={footerStyles.small}
+          />
+        </a>
       </Paper>
     </div>
   )
